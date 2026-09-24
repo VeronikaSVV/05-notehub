@@ -4,8 +4,6 @@ import type { NewNoteData, Note } from "../types/note";
 export interface FetchNotesResponse {
   notes: Note[];
   totalPages: number;
-  page: number;
-  perPage: number;
 }
 
 const token = import.meta.env.VITE_NOTEHUB_TOKEN;
