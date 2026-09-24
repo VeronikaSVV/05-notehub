@@ -5,24 +5,15 @@ export interface Note {
   title: string;
   content: string;
   tag: NoteTag;
+  createdAt: string;
+  updatedAt: string;
 }
 
-export interface NewNoteData {
-  title: string;
-  content: string;
-  tag: NoteTag;
-}
+export type NewNoteData = Pick<Note, "title" | "content" | "tag">;
 
 export interface UpdatedNoteData {
   id: string;
   title?: string;
   content?: string;
   tag?: NoteTag;
-}
-
-export interface FetchNotesResponse {
-  notes: Note[];
-  totalPages: number;
-  page: number;
-  perPage: number;
 }
